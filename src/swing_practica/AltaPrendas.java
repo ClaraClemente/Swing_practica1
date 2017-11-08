@@ -5,6 +5,8 @@
  */
 package swing_practica;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author DAM
@@ -155,7 +157,7 @@ public class AltaPrendas extends javax.swing.JDialog {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(248, 248, 248)
                         .addComponent(jLabel1)))
-                .addContainerGap(154, Short.MAX_VALUE))
+                .addContainerGap(133, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -208,7 +210,25 @@ public class AltaPrendas extends javax.swing.JDialog {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         
+        int precio1 = (int) precio.getValue();
         
+        if (codigo.getText().equals("")) {
+            // error no puede estar vacio
+            JOptionPane.showMessageDialog(this, "No puede estar vacio");
+
+        } else if (color.getSelectedItem().equals("-Elige color-")) {
+            JOptionPane.showMessageDialog(this, "Debes escojer un color");
+
+        }else if (talla.getSelectedItem().equals("-Elige color-")) {
+            JOptionPane.showMessageDialog(this, "Debes escojer una talla");
+
+        }else if (precio1>0) {
+            JOptionPane.showMessageDialog(this, "Debes escojer un color");
+
+        }
+        
+
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
